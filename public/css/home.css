@@ -1,0 +1,51 @@
+#home-div 
+.search {
+    height: 75%;
+    margin: 12.5px 25px;
+}
+
+.dd {
+    margin: 12.5px 25px;
+}
+
+.top-row {
+    margin: 25px 100px;
+}
+
+.pink-text {
+    color: #FD4B4B;
+}
+
+.col-text {
+    line-height: 2;
+    font-size: 60px;
+}
+
+.top-row p {
+    color: #AAAAAA;
+    margin: 40px 0 0;
+    font-size: 20px;
+}
+
+#menu {
+    margin: 50px;
+}
+
+#menu h3 {
+    text-align: center;
+    color: #FD4B4B;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+}
+
+.item-card {
+    background-color: #FFE2E2;
+    border: 0;
+}
+
+.home-item-img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+

@@ -1,0 +1,189 @@
+body {
+    background-color: #FFFAFA;
+    font-family: 'Poppins', sans-serif;
+    background-image: url("https://www.transparenttextures.com/patterns/food.png");
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-link {
+    color: #FD4B4B;
+    font-size: 1.25em;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link:hover {
+    color: black;
+}
+
+.title {
+    color: #FD4B4B;
+    font-size: 6rem;
+    text-align: center;
+    font-weight: bold;
+    margin: 0 0 0.75em;
+}
+
+.title-letter {
+    padding: 0 0.75em;
+}
+
+#main-section {
+    margin: 0 5em;
+}
+
+.main-section-pic {
+    width: 50em;
+}
+
+.sub-title {
+    color: #FD4B4B;
+    text-align: center;
+    font-weight: 400;
+    margin: 0.75em;
+}
+
+#services-section {
+    margin: 5em;
+}
+
+.services-heading {
+    text-align: center;
+    color: #FD4B4B;
+    margin: 3em 0 0.5em;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.st-letter {
+    padding: 0 1em;
+}
+
+.services {
+    text-align: center;
+}
+
+.service-img {
+    width: 20em;
+    height: 20em;
+}
+
+.service-text {
+    font-weight: 400;
+    color: #FD4B4B;
+    padding: 0.5em;
+}
+
+#footer-section {
+    padding: 2.5em 7em;
+    background-color: black;
+}
+
+.quote {
+    font-weight: bold;
+    text-align: center;
+}
+
+.quote .light {
+    color: grey;
+}
+
+.quote .dark {
+    color: white;
+}
+
+.about-features {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.af-img {
+    width: 4em;
+    height: 4.5em;
+}
+
+.af-text {
+    color: #808080;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 1.5em 1.5em 0;
+}
+
+.title-text {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.lang-country-div {
+    display: flex;
+    justify-content: center;
+}
+
+.dd-btn {
+    font-size: 1.5em;
+    margin-left: 2.5em;
+}
+
+.about-row {
+    margin: 2em 10em;
+}
+
+.about-row .col {
+    padding: 0 5em;
+}
+
+.col-title {
+    padding-bottom: 0.5em;
+    color: white;
+}
+
+.col-item {
+    color: #9B9B9B;
+    padding: 0.25em 0;
+    font-size: 1em;
+    font-weight: lighter;
+}
+
+.col-item:hover {
+    color: white;
+}
+
+
+.links-row {
+    text-align: center;
+}
+
+.icon {
+    color: #AAAAAA;
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+.icon:hover {
+    color: white;
+}
+
+.download-btn {
+    width: 10em;
+    height: 2.5em;
+    margin: 0 1em;
+    font-size: 1em;
+}
+
+.copyright-text {
+    color: #9B9B9B;
+    text-align: center;
+    margin: 2.5em;
+    margin-bottom: 0;
+}

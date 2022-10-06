@@ -1,0 +1,87 @@
+
+.hoverable:hover {
+    background-color: #FD4B4B;
+}
+
+.login-title {
+    color: #FD4B4B;
+    font-size: 40px;
+    margin-bottom: 0.5em;
+}
+
+.close {
+    color: #C7C7C7;
+    font-size: 40px;
+}
+
+.close:hover {
+    color: #FD4B4B;
+}
+
+.input-number {
+    border-radius: 2.5em;
+    padding: 15px 25px;
+    border: 0.1em solid #C7C7C7;
+    color: black;
+    width: 100%;
+    margin-bottom: 0.75em;
+    background-color: #FFFAFA;
+}
+
+.input-number:focus {
+    outline: none !important;
+    border:0.1em solid #FD4B4B;
+}
+
+.login-button {
+    width: 100%;
+    border-radius: 2em;
+    background-color: #C7C7C7;
+    color: white;
+    border: 0;
+    padding: 15px;
+    margin-bottom: 0.5em;
+    font-weight: 500;
+}
+
+.or {
+    color: #C7C7C7;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.icons {
+    padding: 0 1em;
+}
+
+.new-acc-text {
+    color: #C7C7C7;
+    margin: 1em 0;
+}
+
+.ig-input {
+    padding: 15px 25px;
+    background-color: #FFFAFA;
+}
+
+.ig-span-left {
+    border-radius: 25px 0 0 25px;
+}
+
+.ig-span-right {
+    border-radius: 0 25px 25px 0;
+}
+
+.input-image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #D1D1D1;
+    background-color: #D1D1D1;
+}
+
+.upload-btn {
+    position: absolute;
+    left: 150px;
+    opacity: 0;
+}

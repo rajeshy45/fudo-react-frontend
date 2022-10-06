@@ -1,0 +1,162 @@
+@media (max-width: 1020px) {
+    #main-section {
+        margin: 0 2.5rem;
+    }
+
+    .title {
+        font-size: 4rem;
+        margin: 0 0 0.75rem;
+    }
+
+    .main-section-pic {
+        width: 30rem;
+    }
+
+    .sub-title {
+        font-size: 1rem;
+        margin: 1.5rem;
+    }
+
+    #services-section {
+        margin: 2.5rem;
+    }
+
+    .services-heading {
+        margin: 2rem 0 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .st-letter {
+        padding: 0 1rem;
+    }
+
+    .service-img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .service-text {
+        font-size: 2rem;
+    }
+
+    #footer-section {
+        padding: 1.5rem 2.5rem;
+    }
+
+    .about-row {
+        margin: 2rem 5rem;
+    }
+    .quote {
+        font-size: 2rem;
+    }
+    .about-features {
+        margin: 1.5rem 0;
+    }
+    .af-img {
+        width: 3rem;
+        height: 3.5rem;
+    }
+
+    .af-text {
+        font-size: 1rem;
+        padding: 1rem 1rem 0;
+    }
+
+    .title-text {
+        font-size: 2rem;
+    }
+    .col-title {
+        font-size: 1.5rem;
+    }
+    .col-itrem {
+        font-size: 1rem;
+    }
+    .dd-btn {
+        font-size: 1rem;
+        margin-left: 2rem;
+    }
+    .about-row .col {
+        padding: 0 2.5rem;
+    }
+
+    .icon {
+        color: #aaaaaa;
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    .download-btn {
+        width: 10rem;
+        height: 2.5rem;
+        margin: 0 1rem;
+        font-size: 1rem;
+    }
+
+    .copyright-text {
+        font-size: 0.75rem;
+        margin: 1rem;
+    }
+
+    .search-bar {
+        width: 30rem;
+    }
+
+    .item-details {
+        text-align: center;
+    }
+
+    .item-page-img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .item-page-btn {
+        width: 15rem;
+        height: 5rem;
+        font-size: 1rem;
+    }
+
+    .text-col {
+        text-align: center;
+    }
+
+    .col-text {
+        font-size: 40px;
+    }
+    
+    .chef-img {
+        width: 30rem;
+        height: 28rem;
+        margin: 2.5rem;
+    }
+
+    .top-row {
+        margin: 25px 25px;
+    }
+
+    .home-item-img {
+        width: 175px;
+        height: 175px;
+    }
+
+    #menu {
+        margin: 25px;
+    }
+
+    .cart-item-details {
+        text-align: center;
+    }
+
+    #cart {
+        margin: 0 25px;
+    }
+
+    #orders {
+        margin: 0 25px;
+    }
+
+    .orders-item-details {
+        text-align: center;
+        margin: 10px 0;
+    }
+    
+}
