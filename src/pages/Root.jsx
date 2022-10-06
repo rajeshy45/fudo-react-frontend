@@ -35,15 +35,11 @@ function Root() {
     const [isLoaded, setIsLoaded] = React.useState(false);
 
         React.useEffect(() => {
-            const request = async () => {
-                const response = await fetch("/auth/user");
-                const json = await response.json();
+            fetch("/auth/user", {method: "GET"})
+                .then(data => data.json())
                 setIsLoaded(true);
-                setIsAuthenticated(json.isAuthenticated);
-                console.log(json);
-            };
-    
-            request();
+                setIsAuthenticated(data.isAuthenticated);
+                console.log(data);
         });
 
     if (!isLoaded) {
