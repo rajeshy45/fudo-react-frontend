@@ -36,10 +36,14 @@ function Root() {
 
         React.useEffect(() => {
             fetch("/auth/user", {method: "GET"})
-                .then(data => data.json())
-                setIsLoaded(true);
-                setIsAuthenticated(data.isAuthenticated);
-                console.log(data);
+                .then(res => res.json())
+                .then(
+                    (data) => {
+                        setIsLoaded(true);
+                        setIsAuthenticated(data.isAuthenticated);
+                        console.log(data);
+                    }
+                )
         });
 
     if (!isLoaded) {
