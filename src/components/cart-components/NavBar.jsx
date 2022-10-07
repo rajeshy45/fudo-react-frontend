@@ -1,6 +1,6 @@
 import React from "react";
 import NavItem from "./navbar-components/NavItem";
-import { GetUser } from "../../App";
+import { baseURL, GetUser } from "../../App";
 
 function NavBar(props) {
     function submitForm() {
@@ -53,7 +53,7 @@ function NavBar(props) {
                         <form
                             className="d-flex search py-3 mx-2 pb-4"
                             role="search"
-                            action="/search"
+                            action={baseURL + "/search"}
                             method="post"
                         >
                             <input
@@ -97,7 +97,7 @@ function NavBar(props) {
                                 <li>
                                     <form
                                         id="logout-form"
-                                        action="/user/logout"
+                                        action={baseURL + "/user/logout"}
                                         method="post"
                                     >
                                         <a

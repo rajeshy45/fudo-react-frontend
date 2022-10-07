@@ -119,7 +119,7 @@ function ItemsSection(props) {
                                     return (
                                         <form
                                             key={index}
-                                            action={"/item/" + item._id}
+                                            action={baseURL + "/item/" + item._id}
                                             method="post"
                                             style={{ borderRadius: "20px" }}
                                             className="mb-3"

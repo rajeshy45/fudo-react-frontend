@@ -1,8 +1,9 @@
 import React from 'react';
+import { baseURL } from '../../../App';
 
 function SignupForm() {
     return (
-        <form action='/user/signup' method='post'>
+        <form action={baseURL + '/user/signup'} method='post'>
             <div className="row">
                 <div className="col">
                     <h1 className="fw-bold login-title">Sign up</h1>

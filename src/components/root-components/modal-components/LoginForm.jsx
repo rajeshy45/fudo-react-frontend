@@ -1,9 +1,10 @@
 import React from 'react';
+import { baseURL } from '../../../App';
 
 function LoginForm() {
 
     return (
-        <form action='/user/login' method='post'>
+        <form action={baseURL + '/user/login'} method='post'>
             <div className="row">
                 <div className="col">
                     <h1 className="fw-bold login-title">Log in</h1>

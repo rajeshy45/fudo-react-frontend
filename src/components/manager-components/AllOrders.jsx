@@ -63,7 +63,7 @@ function DeclinedOrders() {
                             {orders.map((order) => {
                                 return (
                                     <form
-                                        action={"/item/" + order.item._id}
+                                        action={baseURL + "/item/" + order.item._id}
                                         method="post"
                                     >
                                         <button
