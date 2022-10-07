@@ -35,7 +35,7 @@ function Root() {
     const [isLoaded, setIsLoaded] = React.useState(false);
 
         React.useEffect(() => {
-            fetch("https://fudo-node-server.herokuapp.com/auth/user", {method: "GET"})
+            fetch("/auth/user", {method: "GET"})
                 .then(res => res.json())
                 .then(
                     (data) => {
