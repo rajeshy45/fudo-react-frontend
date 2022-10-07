@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import NavBar from ".././components/home-components/NavBar";
+import { baseURL } from '../App';
 import MainSection from '../components/home-components/MainSection';
 import MenuSection from '../components/home-components/MenuSection';
 import Loading from '../components/Loading';
@@ -13,7 +14,7 @@ function Home() {
 
         React.useEffect(() => {
             const request = async () => {
-                const response = await fetch("/auth/user");
+                const response = await fetch(baseURL + "/auth/user");
                 const json = await response.json();
                 setIsLoaded(true);
                 setIsAuthenticated(json.isAuthenticated);

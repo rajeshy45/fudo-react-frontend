@@ -8,6 +8,7 @@ import LoginForm from '../components/root-components/modal-components/LoginForm'
 import SignupForm from '../components/root-components/modal-components/SignupForm';
 import Loading from '../components/Loading';
 import { Navigate } from "react-router-dom";
+import { baseURL } from '../App';
 
 function Root() {
     const navBarLinks = [
@@ -35,7 +36,7 @@ function Root() {
     const [isLoaded, setIsLoaded] = React.useState(false);
 
         React.useEffect(() => {
-            fetch("/auth/user", {method: "GET"})
+            fetch(baseURL + "/auth/user", {method: "GET"})
                 .then(res => res.json())
                 .then(
                     (data) => {

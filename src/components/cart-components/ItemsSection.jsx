@@ -1,5 +1,5 @@
 import React from "react";
-import { sendData } from "../../App";
+import { baseURL, sendData } from "../../App";
 import { Link } from "react-router-dom";
 import Loading from "../Loading";
 import EmptyCart from "./EmptyCart";
@@ -9,7 +9,7 @@ function ItemsSection() {
     const [isLoaded, setIsLoaded] = React.useState(false);
 
     React.useEffect(() => {
-        fetch("/user")
+        fetch(baseURL + "/user")
             .then((res) => res.json())
             .then(
                 (data) => {
@@ -31,7 +31,7 @@ function ItemsSection() {
 
     function removeItem(event) {
         const name = event.target.name;
-        sendData("/remove-item-from-cart", {
+        sendData(baseURL + "/remove-item-from-cart", {
             id: name,
         });
         setCart((prev) => {
@@ -42,14 +42,14 @@ function ItemsSection() {
     }
 
     function handleClick() {
-        sendData("/place-orders", {
+        sendData(baseURL + "/place-orders", {
             cart: cart,
         });
     }
 
     function increaseQty(event) {
         const { id } = event.target;
-        sendData("/cart/inc", {
+        sendData(baseURL + "/cart/inc", {
             id: id,
         });
         reload();
@@ -57,7 +57,7 @@ function ItemsSection() {
 
     function decreaseQty(event) {
         const { id } = event.target;
-        sendData("/cart/dec", {
+        sendData(baseURL + "/cart/dec", {
             id: id,
         });
         reload();

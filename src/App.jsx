@@ -15,6 +15,11 @@ import ApprovedOrders from "./components/manager-components/ApprovedOrders";
 import DeclinedOrders from "./components/manager-components/DeclinedOrders";
 import AllOrders from "./components/manager-components/AllOrders";
 
+const baseURL =
+    process.env.NODE_ENV === "development"
+        ? "localhost:5000"
+        : "https://fudo-node-server.herokuapp.com";
+
 function sendData(route, data) {
     fetch(route, {
         method: "POST",
@@ -34,7 +39,7 @@ function IsAuthenticated(person) {
 
     React.useEffect(() => {
         const request = async () => {
-            const response = await fetch("/auth/" + person);
+            const response = await fetch(baseURL + "/auth/" + person);
             const json = await response.json();
             setAuthenticated(json.isAuthenticated);
             console.log(json);
@@ -51,7 +56,7 @@ function GetUser() {
 
     React.useEffect(() => {
         const request = async () => {
-            const response = await fetch("/user");
+            const response = await fetch(baseURL + "/user");
             const json = await response.json();
             setUser(json.user);
             console.log(json);
@@ -64,7 +69,6 @@ function GetUser() {
 }
 
 function App() {
-
     return (
         <BrowserRouter>
             <Routes>
@@ -77,18 +81,33 @@ function App() {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/order-success" element={<OrderSuccess />} />
                 <Route path="/orders" element={<Orders />} />
-                <Route path="/adminlogin" element={<AdminLogin id="superadmin" />} />
-                <Route path="/managerlogin" element={<AdminLogin id="manager" />} />
+                <Route
+                    path="/adminlogin"
+                    element={<AdminLogin id="superadmin" />}
+                />
+                <Route
+                    path="/managerlogin"
+                    element={<AdminLogin id="manager" />}
+                />
                 <Route path="/manager" element={<Manager />} />
                 <Route path="/superadmin" element={<SuperAdmin />} />
-                <Route path="/manager/pending-approvals" element={<PendingApprovals />} />
-                <Route path="/manager/approved-orders" element={<ApprovedOrders />} />
-                <Route path="/manager/declined-orders" element={<DeclinedOrders />} />
+                <Route
+                    path="/manager/pending-approvals"
+                    element={<PendingApprovals />}
+                />
+                <Route
+                    path="/manager/approved-orders"
+                    element={<ApprovedOrders />}
+                />
+                <Route
+                    path="/manager/declined-orders"
+                    element={<DeclinedOrders />}
+                />
                 <Route path="/manager/all-orders" element={<AllOrders />} />
             </Routes>
         </BrowserRouter>
     );
 }
 
-export { sendData, IsAuthenticated, GetUser };
+export { sendData, IsAuthenticated, GetUser, baseURL };
 export default App;
