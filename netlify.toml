@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/*"
+  from = "/api/*"
   to = "https://fudo-node-server.herokuapp.com/:splat"
   status = 200
   force = true # COMMENT: ensure that we always redirect
