@@ -1,4 +1,5 @@
 import React from 'react';
+import { baseURL } from '../../../App';
 import ListGroupItemNoInput from './ListGroupItemNoInput';
 
 function EditCategoryForm() {
@@ -15,7 +16,7 @@ function EditCategoryForm() {
     function GetCategories() {
         React.useEffect(() => {
             const request = async () => {
-                const response = await fetch('/categories');
+                const response = await fetch(baseURL + '/categories');
                 const json = await response.json();
                 setCategories(json.categories);
                 console.log(json);

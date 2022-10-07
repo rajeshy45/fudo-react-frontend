@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { baseURL } from "../../App";
 import Loading from "../Loading";
 import EmptyMenu from "./EmptyMenu";
 
@@ -15,7 +16,7 @@ function ItemsSection(props) {
 
     React.useEffect(() => {
         const request = async () => {
-            const response = await fetch("/categories");
+            const response = await fetch(baseURL + "/categories");
             const json = await response.json();
             setIsLoaded(true);
             setCategories(json.categories);
@@ -26,7 +27,7 @@ function ItemsSection(props) {
 
     React.useEffect(() => {
         const request = async () => {
-            const response = await fetch("/items");
+            const response = await fetch(baseURL + "/items");
             const json = await response.json();
             setIsLoaded(true);
             setItems(json.items);

@@ -4,6 +4,7 @@ import ItemsSection from "../components/cart-components/ItemsSection";
 import Loading from "../components/Loading";
 import { Navigate } from "react-router-dom";
 import FooterSection from "../components/root-components/FooterSection";
+import { baseURL } from "../App";
 
 function Cart() {
     const [isAuthenticated, setIsAuthenticated] = React.useState(false);
@@ -11,7 +12,7 @@ function Cart() {
 
     React.useEffect(() => {
         const request = async () => {
-            const response = await fetch("/auth/user");
+            const response = await fetch(baseURL + "/auth/user");
             const json = await response.json();
             setIsLoaded(true);
             setIsAuthenticated(json.isAuthenticated);

@@ -1,13 +1,14 @@
 import React from "react";
 import Loading from "../Loading";
 import { Capitalize } from "react-lodash";
+import { baseURL } from "../../App";
 
 function OrdersSection() {
     const [orders, setOrders] = React.useState({});
     const [isLoaded, setIsLoaded] = React.useState(false);
 
     React.useEffect(() => {
-        fetch("/orders")
+        fetch(baseURL + "/orders")
             .then((res) => res.json())
             .then(
                 (data) => {

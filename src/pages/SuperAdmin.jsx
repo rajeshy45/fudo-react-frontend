@@ -12,6 +12,7 @@ import EditCategoryForm from '../components/superadmin-components/modal-componen
 import EditCategoryFormHelper from '../components/superadmin-components/modal-components/EditCategoryFormHelper';
 import Loading from '../components/Loading';
 import { Navigate } from "react-router-dom";
+import { baseURL } from '../App';
 
 
 function SuperAdmin() {
@@ -21,7 +22,7 @@ function SuperAdmin() {
 
     React.useEffect(() => {
         const request = async () => {
-            const response = await fetch('/categories');
+            const response = await fetch(baseURL + '/categories');
             const json = await response.json();
             setCategories(json.categories);
             console.log(json);
@@ -32,7 +33,7 @@ function SuperAdmin() {
 
     React.useEffect(() => {
         const request = async () => {
-            const response = await fetch('/items');
+            const response = await fetch(baseURL + '/items');
             const json = await response.json();
             setItems(json.items);
             console.log(json);
@@ -45,7 +46,7 @@ function SuperAdmin() {
 
     React.useEffect(() => {
         const request = async () => {
-            const response = await fetch("/auth/superadmin");
+            const response = await fetch(baseURL + "/auth/superadmin");
             const json = await response.json();
             setIsLoaded(true);
             setIsAuthenticated(json.isAuthenticated);

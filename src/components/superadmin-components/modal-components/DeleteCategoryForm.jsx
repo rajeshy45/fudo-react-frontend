@@ -1,6 +1,6 @@
 import React from 'react';
 import MyToast from '../MyToast';
-import { sendData } from "../../../App";
+import { baseURL, sendData } from "../../../App";
 import ListGroupItem from './ListGroupItem';
 
 function DeleteCategoryForm() {
@@ -21,7 +21,7 @@ function DeleteCategoryForm() {
     function GetCategories() {
         React.useEffect(() => {
             const request = async () => {
-                const response = await fetch('/categories');
+                const response = await fetch(baseURL + '/categories');
                 const json = await response.json();
                 setCategories(json.categories);
                 console.log(json);

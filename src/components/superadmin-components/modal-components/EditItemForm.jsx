@@ -1,4 +1,5 @@
 import React from 'react';
+import { baseURL } from '../../../App';
 import ListGroupItemNoInput from './ListGroupItemNoInput';
 
 function EditItemForm() {
@@ -11,7 +12,7 @@ function EditItemForm() {
     function GetItems() {
         React.useEffect(() => {
             const request = async () => {
-                const response = await fetch('/items');
+                const response = await fetch(baseURL + '/items');
                 const json = await response.json();
                 setItems(json.items);
                 console.log(json);
@@ -36,7 +37,7 @@ function EditItemForm() {
     function GetCategories() {
         React.useEffect(() => {
             const request = async () => {
-                const response = await fetch('/categories');
+                const response = await fetch(baseURL + '/categories');
                 const json = await response.json();
                 setCategories(json.categories);
                 console.log(json);

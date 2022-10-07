@@ -1,5 +1,5 @@
 import React from "react";
-import { sendData } from "../../App";
+import { baseURL, sendData } from "../../App";
 import Loading from "../Loading";
 import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
@@ -10,7 +10,7 @@ function PendingApprovals() {
     const [isLoaded, setIsLoaded] = React.useState(false);
 
     React.useEffect(() => {
-        fetch("/all-orders")
+        fetch(baseURL + "/all-orders")
             .then((res) => res.json())
             .then(
                 (data) => {
@@ -27,7 +27,7 @@ function PendingApprovals() {
 
     React.useEffect(() => {
         const request = async () => {
-            const response = await fetch("/auth/manager");
+            const response = await fetch(baseURL + "/auth/manager");
             const json = await response.json();
             setIsLoaded(true);
             setIsAuthenticated(json.isAuthenticated);

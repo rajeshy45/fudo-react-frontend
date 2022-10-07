@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import { IsAuthenticated } from "../../App";
+import { baseURL, IsAuthenticated } from "../../App";
 import { sendData } from "../../App";
 import Loading from "../Loading";
 import MyToast from "../superadmin-components/MyToast";
@@ -20,7 +20,7 @@ function ItemSection() {
 
     React.useEffect(() => {
         const request = async () => {
-            const response = await fetch("/item/" + id);
+            const response = await fetch(baseURL + "/item/" + id);
             const json = await response.json();
             setIsLoaded(true);
             setItem(json.item);

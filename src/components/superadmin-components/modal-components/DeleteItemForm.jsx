@@ -1,6 +1,6 @@
 import React from 'react';
 import MyToast from '../MyToast';
-import { sendData } from "../../../App";
+import { baseURL, sendData } from "../../../App";
 import ListGroupItem from './ListGroupItem';
 
 function DeleteItemForm() {
@@ -16,7 +16,7 @@ function DeleteItemForm() {
     function GetItems() {
         React.useEffect(() => {
             const request = async () => {
-                const response = await fetch('/items');
+                const response = await fetch(baseURL + '/items');
                 const json = await response.json();
                 setItems(json.items);
                 console.log(json);
@@ -42,7 +42,7 @@ function DeleteItemForm() {
     function GetCategories() {
         React.useEffect(() => {
             const request = async () => {
-                const response = await fetch('/categories');
+                const response = await fetch(baseURL + '/categories');
                 const json = await response.json();
                 setCategories(json.categories);
                 console.log(json);

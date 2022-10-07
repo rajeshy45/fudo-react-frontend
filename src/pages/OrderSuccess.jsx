@@ -3,6 +3,7 @@ import NavBar from '../components/home-components/NavBar';
 import { Link, Navigate } from "react-router-dom";
 import Loading from '../components/Loading';
 import FooterSection from '../components/root-components/FooterSection';
+import { baseURL } from '../App';
 
 function OrderSuccess() {
 
@@ -11,7 +12,7 @@ function OrderSuccess() {
 
         React.useEffect(() => {
             const request = async () => {
-                const response = await fetch("/auth/user");
+                const response = await fetch(baseURL + "/auth/user");
                 const json = await response.json();
                 setIsLoaded(true);
                 setIsAuthenticated(json.isAuthenticated);

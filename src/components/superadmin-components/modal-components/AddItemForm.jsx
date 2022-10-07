@@ -1,5 +1,5 @@
 import React from 'react';
-import { sendData } from "../../../App";
+import { baseURL, sendData } from "../../../App";
 import MyToast from '../MyToast';
 
 function AddItemForm() {
@@ -19,7 +19,7 @@ function AddItemForm() {
     function GetCategories() {
         React.useEffect(() => {
             const request = async () => {
-                const response = await fetch('/categories');
+                const response = await fetch(baseURL + '/categories');
                 const json = await response.json();
                 setCategories(json.categories);
                 console.log(json);

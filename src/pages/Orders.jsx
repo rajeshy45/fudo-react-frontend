@@ -4,6 +4,7 @@ import Loading from "../components/Loading";
 import { Navigate } from "react-router-dom";
 import OrdersSection from "../components/orders-components/OrdersSection";
 import FooterSection from "../components/root-components/FooterSection";
+import { baseURL } from "../App";
 
 
 const navBarLinks = [
@@ -26,7 +27,7 @@ function Orders() {
 
         React.useEffect(() => {
             const request = async () => {
-                const response = await fetch("/auth/user");
+                const response = await fetch(baseURL + "/auth/user");
                 const json = await response.json();
                 setIsLoaded(true);
                 setIsAuthenticated(json.isAuthenticated);

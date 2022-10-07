@@ -1,4 +1,5 @@
 import React from 'react';
+import { baseURL } from '../../App';
 import TopFoodRow from './menusection-components/TopFoodRow';
 
 function MenuSection() {
@@ -8,7 +9,7 @@ function MenuSection() {
 
     React.useEffect(() => {
         const request = async () => {
-            const response = await fetch('/items');
+            const response = await fetch(baseURL + '/items');
             const json = await response.json();
             setItems(json.items);
             console.log(json);

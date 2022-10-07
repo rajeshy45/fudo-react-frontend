@@ -3,6 +3,7 @@ import NavBar from "../components/manager-components/NavBar";
 import SettingCard from "../components/manager-components/SettingCard";
 import Loading from "../components/Loading";
 import { Navigate } from "react-router-dom";
+import { baseURL } from "../App";
 
 function Manager() {
     const [orders, setOrders] = React.useState({});
@@ -11,7 +12,7 @@ function Manager() {
     const [isAuthLoaded, setIsAuthLoaded] = React.useState(false);
 
     React.useEffect(() => {
-        fetch("/all-orders")
+        fetch(baseURL + "/all-orders")
             .then((res) => res.json())
             .then(
                 (data) => {
@@ -21,7 +22,7 @@ function Manager() {
     }, []);
 
     React.useEffect(() => {
-        fetch("/items")
+        fetch(baseURL + "/items")
             .then((res) => res.json())
             .then(
                 (data) => {
@@ -35,7 +36,7 @@ function Manager() {
 
     React.useEffect(() => {
         const request = async () => {
-            const response = await fetch("/auth/manager");
+            const response = await fetch(baseURL + "/auth/manager");
             const json = await response.json();
             setIsAuthLoaded(true);
             setIsAuthenticated(json.isAuthenticated);

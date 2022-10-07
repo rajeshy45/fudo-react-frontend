@@ -1,5 +1,5 @@
 import React from 'react';
-import { sendData } from "../../../App";
+import { baseURL, sendData } from "../../../App";
 import MyToast from '../MyToast';
 import ListGroupItem from './ListGroupItem';
 
@@ -15,7 +15,7 @@ function AddCategoryForm() {
     function GetItems() {
         React.useEffect(() => {
             const request = async () => {
-                const response = await fetch('/items');
+                const response = await fetch(baseURL + '/items');
                 const json = await response.json();
                 setItems(json.items);
                 console.log(json);

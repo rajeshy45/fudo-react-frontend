@@ -4,6 +4,7 @@ import LoginForm from '../components/admin-components/modal-components/LoginForm
 import SignupForm from '../components/admin-components/modal-components/SignupForm';
 import Loading from '../components/Loading';
 import { Navigate } from "react-router-dom";
+import { baseURL } from '../App';
 
 function AdminLogin(props) {
 
@@ -28,7 +29,7 @@ function AdminLogin(props) {
 
     React.useEffect(() => {
         const request = async () => {
-            const response = await fetch("/auth/" + props.id);
+            const response = await fetch(baseURL + "/auth/" + props.id);
             const json = await response.json();
             setIsLoaded(true);
             setIsAuthenticated(json.isAuthenticated);
