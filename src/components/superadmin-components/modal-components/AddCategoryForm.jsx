@@ -39,7 +39,7 @@ function AddCategoryForm() {
     }
 
     function handleClick() {
-        sendData("/add-category", {
+        sendData(baseURL + "/add-category", {
             name: category,
             selectedItems: selectedItems
         });

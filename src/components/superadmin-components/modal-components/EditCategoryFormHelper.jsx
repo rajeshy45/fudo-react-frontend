@@ -47,7 +47,7 @@ function EditCategoryFormHelper(props) {
     }
 
     function handleClick() {
-        sendData("/edit-category", {
+        sendData(baseURL + "/edit-category", {
             key: props.category._id,
             name: category,
             selectedItems: selectedItems

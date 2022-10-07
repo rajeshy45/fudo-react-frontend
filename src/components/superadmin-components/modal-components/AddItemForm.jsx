@@ -61,7 +61,7 @@ function AddItemForm() {
     }
 
     function handleClick() {
-        sendData("/add-item", item);
+        sendData(baseURL + "/add-item", item);
         setItem(
             {
                 img: "images/gg_profile.png",

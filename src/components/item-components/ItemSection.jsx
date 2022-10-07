@@ -54,7 +54,7 @@ function ItemSection() {
 
         if (name === "cart") {
             if (isAuthenticated) {
-                sendData("/add-item-to-cart", order);
+                sendData(baseURL + "/add-item-to-cart", order);
                 setToast({
                     msg: "Item added to cart",
                     show: true,
@@ -68,7 +68,7 @@ function ItemSection() {
             }
         } else {
             if (isAuthenticated) {
-                sendData("/place-order", order);
+                sendData(baseURL + "/place-order", order);
                 setToast({
                     msg: "Order placed!",
                     show: true,

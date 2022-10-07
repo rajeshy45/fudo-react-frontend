@@ -59,7 +59,7 @@ function DeleteItemForm() {
     }
 
     function handleClick() {
-        sendData("/delete-items", {
+        sendData(baseURL + "/delete-items", {
             selectedItems: selectedItems
         });
         setCategory("All");

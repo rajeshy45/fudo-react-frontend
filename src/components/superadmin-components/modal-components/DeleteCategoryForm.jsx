@@ -33,7 +33,7 @@ function DeleteCategoryForm() {
     }
 
     function handleClick() {
-        sendData("/delete-categories", {
+        sendData(baseURL + "/delete-categories", {
             selectedCategories: selectedCategories
         });
         setSearch("");

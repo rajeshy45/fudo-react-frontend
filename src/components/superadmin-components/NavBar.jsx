@@ -1,5 +1,5 @@
 import React from "react";
-import { sendData } from "../../App";
+import { baseURL, sendData } from "../../App";
 import NavItem from "./navbar-components/NavItem";
 
 function NavBar(props) {
@@ -15,7 +15,7 @@ function NavBar(props) {
     };
 
     function logout() {
-        sendData("/superadmin/logout", {});
+        sendData(baseURL + "/superadmin/logout", {});
     }
 
     return (

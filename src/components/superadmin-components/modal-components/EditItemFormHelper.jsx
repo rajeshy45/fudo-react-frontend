@@ -62,7 +62,7 @@ function EditItemFormHelper(props) {
     }
 
     function handleClick() {
-        sendData("/edit-item", item);
+        sendData(baseURL + "/edit-item", item);
         setShow(true);
     }
 

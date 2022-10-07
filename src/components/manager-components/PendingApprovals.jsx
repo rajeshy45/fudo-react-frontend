@@ -57,7 +57,7 @@ function PendingApprovals() {
     function approveOrder(event) {
         const id = event.target.id;
 
-        sendData("/approve-order", {
+        sendData(baseURL + "/approve-order", {
             id: id,
         });
 
@@ -67,7 +67,7 @@ function PendingApprovals() {
     function rejectOrder(event) {
         const id = event.target.id;
 
-        sendData("/reject-order", {
+        sendData(baseURL + "/reject-order", {
             id: id,
         });
 
